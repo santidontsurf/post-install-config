@@ -11,16 +11,57 @@ This tutorial outlines the recommended post-installation configuration of the op
 <p>
 </p>
 <p>
-Now that we have successfully installed osTicket alongside all it's dependencies we can focus on systems administration. There are two links that will be important for this section. The first: http://localhost/osTicket/scp/login.php is the admin login page from where you can login using the admin account created on the first part of this tutorial, we will do most all of the configurations from this side of osTicket. The second: http://localhost/osTicket is the end-user side of osTicket from where tickets can be submitted for you to work on. 
-
- *(If you are working on a Windows laptop already you can skip the first three steps and starts at step four (IIS))*
-</p>
-<p>
-In Azure, create a resource group and title it "osTicketrg" then a virtual network under that same resource group titled "osticketrg-vnet". Afterwards create a VM with 2 vcpus, 8 GiB Memory and put it under the same resource group.
+Now that we have successfully installed osTicket alongside all it's dependencies we can focus on systems administration. There are two links that will be important for this section. The first: http://localhost/osTicket/scp/login.php is the admin login page from where you can login using the admin account created on the first part of this tutorial, we will do most all of the configurations from this side of osTicket. The second: http://localhost/osTicket is the end-user side of osTicket from where tickets can be submitted for you to work on. Click on the first link and log in, the main page should look something like this: 
 </p>
 <p align="center">
- <img alt="Screenshot 2025-05-29 at 11 36 38 AM" src="https://github.com/user-attachments/assets/b5acbb0b-579f-4f38-b558-d1ced7d62c7c" height="80%" width="80%" />
+<img alt="Screenshot 2025-06-16 at 10 33 44 AM" src="https://github.com/user-attachments/assets/2a41b0bd-2f63-4e4c-8dbf-20e9e3bb91f3" height=80% width=80%/>
 </p>
 <br />
-<p>
+<p>As of now, the main page is set on the Agent panel, which allows you to work on tickets but doesn't have access to all the administrative tools that we want to use. To do use these tools, click on "Admin Panel" on the upper-right corner of the page to access the administrative side of osTicket. On this new page, go to Agents -> Roles to see the hierarchy of access that different roles have on osTicket, we will create a new role by clickin on the right-side icon "Add New Role".</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 10 49 16 AM" src="https://github.com/user-attachments/assets/525a714b-c5bb-4187-828a-da8441bbc60b" height=80% width=80% />
 </p>
+<br />
+<p>We will name this role "Supreme Admin" and click on Permissions to choose how much access we want this new role to have. There are tabs on the Permissions page: Tickets, Tasks, and Knowledgebase. We will check every single permission on all three of these to give the admin complete access to all configurations, then click Add Role at the bottom to create this new role.</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 10 55 38 AM" src="https://github.com/user-attachments/assets/3a8d7c3b-175d-46f9-a91f-41d82f81d69c" height=80% width=80%/></p>
+<br />
+<p>Next we are going to check the derpartments in osTicket. Department configuration affects ticket visibility, where you can choose if tickets assigned to a department can be seen by only that department or by everyone in the system. Go to Agents -> Departments to see the current departments that we have, we will create a new department by clicking "Add New Department". Here we will create a Top-Level Department called "System Aministrators" where our Supreme Admin will be assigned to. For the system administrators and leave most of the configurations as they are, then scroll down and click "Create Dept".</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 11 09 25 AM" src="https://github.com/user-attachments/assets/279d82fe-d80c-4da9-844e-01fc39a301c1" height=80% width=80% />
+</p>
+<br />
+<p>Under the Agent page travel to Teams where will create a new Team. With Teams, we can have people from different departments joined together under a single team for tickets that require the assistance of various key role players. Under teams there is already a Level I Support Team so we will create a new team by clicking on "Add New Team" and titling the team "Level II Support" then click "Save Changes".
+</p>
+<p align="center"><img  alt="Screenshot 2025-06-16 at 11 14 48 AM" src="https://github.com/user-attachments/assets/892d0956-dd07-46e1-883e-b6eddded4447" height=80% width=80%/>
+</p>
+<br />
+<p>Next, we will examine the authentication settings to make sure that an importnat setting for the purpose of this tutorial is active. We will travel to Settings -> Users and look under authentication settings make sure that "Require registration and login to create tickets" is unchecked. If it is already unchecked nothing needs to be done, but if it is checked, just unchecked the settting and click "Save Changes" at the bottom.</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 11 23 34 AM" src="https://github.com/user-attachments/assets/27fbcde5-0152-4ab4-9b6d-e13626e7d072" height=80% width=80%/>
+</p>
+<br />
+<p>We now have created a new role, a new department, and a new team for our organization. It is now time to create Agents. Still in the Admin panel, travel to Agents and click "Add New Agent".</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 11 26 31 AM" src="https://github.com/user-attachments/assets/e840749b-31cb-4dc2-b24f-a05fe4999a4c" height=80% width=80% />
+</p>
+<br />
+<p>In the agent creation page we will name this agent Jane Doe and add an email and username. Then click "Set Password" and make sure that both "Send the agent a password reset email" and "Require password change at next login" are unchecked, then create a password and click "Set". For the sake of this lab, the username will be "jane" and the password "janedoe". </p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 11 30 27 AM" src="https://github.com/user-attachments/assets/81ff1a25-d2c8-4be5-8b27-b6c98ec6558b" height=80% width=80% />
+</p>
+<br />
+<p>Under the Access tab for this new agent, we will assign Jane to the System Administrators department and her role will be Supreme Admin and on the Teams tab we will add her to the Lelvel II Support Team then click "Create" to add Jane as an agent.</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 11 37 29 AM" src="https://github.com/user-attachments/assets/95546086-2187-4d58-b5bd-238a8cdce9fc" height=80% width=80%/>
+</p>
+<br />
+<p>With an agent finnally created, we will now create some users. Click on Agent Panel on the upper right of the page and once you're in the Agent Panel, click on the Users tab, then "Add User". </p>
+<p align="center"><img  alt="Screenshot 2025-06-16 at 11 39 51 AM" src="https://github.com/user-attachments/assets/dd5fa15e-68d0-429b-9ea1-65c677542c5c" height=80% width=80%  />
+</p>
+<br />
+<p>Create two users named Karen and Ken. All that is needed is a name for the user and an email.</p>
+<p align="center"><img alt="Screenshot 2025-06-16 at 11 43 25 AM" src="https://github.com/user-attachments/assets/3dc64bb9-5f8d-43bd-b862-acd60381c769" height=80% width=80%/>
+</p>
+
+
+
+
+
+
+
+
+
