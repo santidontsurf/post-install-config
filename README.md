@@ -3,33 +3,15 @@
 </p>
 
 <h1>osTicket - Post-Installation Configuration</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+This tutorial outlines the recommended post-installation configuration of the open-source help desk ticketing system osTicket.<br />
 
 
-
-<h2>Environments and Technologies Used</h2>
-
-- Microsoft Azure (Virtual Machines/Compute)
-- Windows App (Apple App Store)
-- Internet Information Services (IIS)
-
-<h2>Operating Systems Used </h2>
-
-- Windows 11 Pro</b> (24H2)
-
-<h2>List of Prerequisites</h2>
-
-- Azure Virtual Machine
-- Windows App
-- osTicket Installation files
-- Heidi SQL
-
-<h2>Installation Steps</h2>
+<h2>Post-Installation</h2>
 
 <p>
 </p>
 <p>
-Using Microsoft Azure portal(portal.azure.com) we will create a virtual machine (VM) to use as a testing ground for this project and protect our physical device from anything that might malfunction along the way. VM's also allow us to use an operating system different from the one our device uses, in this case we will be using a Windows 11 Pro VM on a Macbook laptop.
+Now that we have successfully installed osTicket alongside all it's dependencies we can focus on systems administration. There are two links that will be important for this section. The first: http://localhost/osTicket/scp/login.php is the admin login page from where you can login using the admin account created on the first part of this tutorial, we will do most all of the configurations from this side of osTicket. The second: http://localhost/osTicket is the end-user side of osTicket from where tickets can be submitted for you to work on. 
 
  *(If you are working on a Windows laptop already you can skip the first three steps and starts at step four (IIS))*
 </p>
