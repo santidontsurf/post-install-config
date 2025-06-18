@@ -56,9 +56,24 @@ Now that we have successfully installed osTicket alongside all it's dependencies
 <p>Create two users named Karen and Ken. All that is needed is a name for the user and an email.</p>
 <p align="center"><img alt="Screenshot 2025-06-16 at 11 43 25 AM" src="https://github.com/user-attachments/assets/3dc64bb9-5f8d-43bd-b862-acd60381c769" height=80% width=80%/>
 </p>
-
-
-
+<br />
+<p>Next, we will create Service-Level Agreements (SLA's) which determine the severity of a ticket and how soon it should be resolved. To do this we will travel back to the Admin Panel and into the Manage tab. Under the manage tab click on SLA click "Add New SLA Plan".</p>
+<p align="center"><img alt="Screenshot 2025-06-18 at 10 12 27 AM" src="https://github.com/user-attachments/assets/9a1af8d3-4d63-4c7b-a1ee-96ba16fa9649" height=80% width=80%/>
+</p>
+<br />
+<p>In this page we will create three types of SLA based each with different ticket severity. The first SLA will be "Sev-A" for the most important tickets. Sev-A will have a grace Period of 1 hour and a schedule of 24/7. The second SLA will be "Sev-B" with a grace period of 4 hours and a schedule of 24/7. Lastly, SLA "Sev-C" with a grace period of 8 hours and a schedule of 24/5 (Business hours). Follow the example below to create all three SLA's.
+</p>
+<p align="center"><img alt="Screenshot 2025-06-18 at 10 17 59 AM" src="https://github.com/user-attachments/assets/8ab09826-7d22-4245-bcb7-998870fc90a5" height=80% width=80% />
+</p>
+<br />
+<p>The last step to finish all osTicket configurations is to create some Help Topics to better classify each ticket submitted by an end-user. On the same Manage tab through which we accessed SLA, click on Help Topics on the far left, then click "Add New Help Topic".</p>
+<p align="center"><img alt="Screenshot 2025-06-18 at 10 23 53 AM" src="https://github.com/user-attachments/assets/4e76812e-72f0-4f5d-aed9-392711419fe6" height=80% width=80%/>
+</p>
+<br />
+<p>For this lab we will only need to create one more Help Topic. Call this topic "Business Critical Outage" and choose "Report a Problem" as the Parent Topic for it, then click "Add Topic" at the bottom.</p>
+<p align="center"><img alt="Screenshot 2025-06-18 at 10 26 08 AM" src="https://github.com/user-attachments/assets/cd5a3052-2b70-489f-816c-0d327ce8150c" height=80% width=80%/>
+</p>
+<br />
 
 
 
