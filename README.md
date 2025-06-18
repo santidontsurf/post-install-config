@@ -74,6 +74,7 @@ Now that we have successfully installed osTicket alongside all it's dependencies
 <p align="center"><img alt="Screenshot 2025-06-18 at 10 26 08 AM" src="https://github.com/user-attachments/assets/cd5a3052-2b70-489f-816c-0d327ce8150c" height=80% width=80%/>
 </p>
 <br />
+<p>Congratulations! You have successfully configured osTicket to be ready to use and are almost done with this tutorial! Please travel to osTicket: Ticket Lifecycle Examples for final part of this tutorial.</p>
 
 
 
