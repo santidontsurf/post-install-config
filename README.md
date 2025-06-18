@@ -45,7 +45,7 @@ Now that we have successfully installed osTicket alongside all it's dependencies
 <p align="center"><img alt="Screenshot 2025-06-16 at 11 30 27 AM" src="https://github.com/user-attachments/assets/81ff1a25-d2c8-4be5-8b27-b6c98ec6558b" height=80% width=80% />
 </p>
 <br />
-<p>Under the Access tab for this new agent, we will assign Jane to the System Administrators department and her role will be Supreme Admin and on the Teams tab we will add her to the Lelvel II Support Team then click "Create" to add Jane as an agent.</p>
+<p>Under the Access tab for this new agent, we will assign Jane to two departments. Her primary department will be "System Administrators" and her role will be "Supreme Admin" and under Extended Access selec "Support" as her secondary deparmment with the same role. Under the Teams tab we will add her to the Level II Support Team then click "Create" to add Jane as an agent.</p>
 <p align="center"><img alt="Screenshot 2025-06-16 at 11 37 29 AM" src="https://github.com/user-attachments/assets/95546086-2187-4d58-b5bd-238a8cdce9fc" height=80% width=80%/>
 </p>
 <br />
