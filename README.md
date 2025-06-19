@@ -76,7 +76,7 @@ Now that we have successfully installed osTicket alongside all it's dependencies
 <br />
 <p>Congratulations! You have successfully configured osTicket to be ready to use and are almost done with this tutorial! For the final part travel to:</p>
   
-[osTicket: Ticket Lifecycle Examples]
+[osTicket: Ticket Lifecycle Examples](https://github.com/santidontsurf/ticket-lifecycle)
 
 
 
